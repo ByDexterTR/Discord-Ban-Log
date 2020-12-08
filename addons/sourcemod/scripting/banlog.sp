@@ -15,6 +15,7 @@ public Plugin myinfo =
 public void OnPluginStart()
 {
 	webhook = CreateConVar("sm_banlog_webhook", "webhooku giriniz", "");
+	AutoExecConfig(true, "Discord_Ban_Log");
 }
 public Action OnBanClient(int client, int time, int flags, const char[] reason, const char[] kick_message, const char[] command, any source)
 {
