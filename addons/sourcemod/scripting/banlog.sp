@@ -29,7 +29,7 @@ public Action OnBanClient(int client, int time, int flags, const char[] reason, 
 
 	if (time > 0)
 		Format(mesaj, sizeof(mesaj), "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n> **:star: Yeni Bir Yasaklama :star:**\n> ```ini\n> [ Yetkili ] : %N - %s\n> [ Oyuncu ] : %N - %s\n> [ Süre ] : %d Dakika\n> [ Sebep ] : %s```", source, yetkilisteamid, client, clientsteamid, time, reason);
-	else if (time <= 0)
+	else
 		Format(mesaj, sizeof(mesaj), "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n> **:star: Yeni Bir Yasaklama :star:**\n> ```ini\n> [ Yetkili ] : %N - %s\n> [ Oyuncu ] : %N - %s\n> [ Süre ] : Kalıcı\n> [ Sebep ] : %s```", source, yetkilisteamid, client, clientsteamid, reason);
 	
 	SendToDiscord(mesaj);
